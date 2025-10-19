@@ -1,0 +1,14 @@
+[PrefixDeclaration]
+kg: http://teaming.ai/
+sbpmnc: https://sBPMN.github.io/2.0/classes#
+sbpmnp: https://sBPMN.github.io/2.0/properties#
+camunda: https://docs.camunda.org/manual/7.23/reference/bpmn20/custom-extensions/
+xsd: http://www.w3.org/2001/XMLSchema#
+rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+owl: http://www.w3.org/2002/07/owl#
+
+[MappingDeclaration] @collection [[
+mappingId     activityTypeMapping
+target        kg:{PROC_INST_ID_} sbpmnp:contains kg:{ID_} . kg:{ID_} rdf:type kg:{ACT_ID_} ; camunda:assignee kg:{ASSIGNEE_} ; camunda:startTime "{START_TIME_}"^^xsd:dateTime ; camunda:endTime "{END_TIME_}"^^xsd:dateTime ; camunda:sequenceCounter "{SEQUENCE_COUNTER_}"^^xsd:int .
+source        SELECT ID_, PROC_INST_ID_, ASSIGNEE_, ACT_ID_, START_TIME_, END_TIME_, SEQUENCE_COUNTER_ FROM ACT_HI_ACTINST
+]]

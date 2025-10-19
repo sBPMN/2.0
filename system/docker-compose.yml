@@ -1,0 +1,86 @@
+version: "3.8"
+
+volumes:
+  shared-jar:
+
+services:
+
+  h2:
+    build: ./h2
+    container_name: h2
+    ports:
+      - "9093:9092"
+    volumes:
+      - shared-jar:/shared
+    working_dir: /shared
+    command: >
+      java -cp h2-1.4.190.jar org.h2.tools.Server
+      -tcp -tcpAllowOthers -tcpPort 9092
+      -baseDir /
+    stdin_open: true
+    tty: true
+
+  camunda:
+    image: camunda/camunda-bpm-platform:run-7.15.0
+    container_name: camunda
+    ports:
+      - "9094:8080"
+    depends_on:
+      - h2
+    environment:
+      - DB_DRIVER=org.h2.Driver
+      - DB_URL=jdbc:h2:tcp://h2:9092/h2/camunda-h2-database;IFEXISTS=FALSE
+      - DB_USERNAME=sa
+      - DB_PASSWORD=camunda
+    volumes:
+      - shared-jar:/camunda/lib
+
+  ontop:
+    image: ontop/ontop-endpoint
+    container_name: ontop
+    restart: always
+    ports:
+      - "9095:8080"
+    volumes:
+      - shared-jar:/opt/ontop/jdbc
+      - ./ontop/mapping.obda:/opt/ontop/mapping.obda
+      - ./ontop/ontology.owl:/opt/ontop/ontology.owl
+      - ./ontop/database.properties:/opt/ontop/database.properties
+      - ./ontop/wait-for-db.sh:/wait-for-db.sh
+    depends_on:
+      - h2
+      - camunda
+    environment:
+      - ONTOP_MAPPING_FILE=/opt/ontop/mapping.obda
+      - ONTOP_OWL_FILE=/opt/ontop/ontology.owl
+      - ONTOP_PROPERTIES_FILE=/opt/ontop/database.properties
+    entrypoint: ["/wait-for-db.sh"]
+
+  fuseki:
+    image: stain/jena-fuseki
+    container_name: fuseki
+    ports:
+      - "9096:3030"
+    volumes:
+      - type: bind
+        source: ./fuseki/camunda
+        target: /fuseki-data
+        consistency: delegated
+    environment:
+      ADMIN_PASSWORD: admin
+    command: [
+      "java", "-jar", "/jena-fuseki/fuseki-server.jar",
+      "--update",
+      "--loc=/fuseki-data",
+      "/camunda"
+    ]
+
+
+  comunica:
+    build: ./comunica
+    container_name: comunica
+    ports:
+      - "9097:3000"
+    depends_on:
+      - ontop
+      - fuseki

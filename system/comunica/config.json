@@ -1,0 +1,10 @@
+{
+  "@context": [
+    "https://comunica.dev/context/contexts/query.jsonld",
+    "https://comunica.dev/context/contexts/http.jsonld"
+  ],
+  "sources": [
+    { "type": "sparql", "value": "http://ontop:8080/sparql" },
+    { "type": "sparql", "value": "http://fuseki:3030/camunda/sparql" }
+  ]
+}

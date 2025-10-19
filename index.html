@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script>
+<div class="darkmode">
+  <dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+
+<link rel="icon" type="image/png" href="resources/rdf.icon"/> 
+<title>sBPMN Ontology</title>
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "url": "https://sBPMN.github.io/2.0/",
+  "image": "http://vowl.visualdataweb.org/webvowl/#iri=https://sBPMN.github.io/2.0/",
+  "name": "sBPMN Ontology",
+  "headline": "Document describing the ontology https://sBPMN.github.io/2.0/",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Franz Krause"
+    }
+  ]
+}
+</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+
+<script>
+// Minimal script – no ToC building
+function loadHash() {
+  // Render markdown content
+  jQuery(".markdown").each(function(el){
+    jQuery(this).after(marked.parse(jQuery(this).text())).remove();
+  });
+
+  // Scroll to hash if present
+  const hash = location.hash;
+  if ($(hash).offset() != null) {
+    $('html, body').animate({ scrollTop: $(hash).offset().top }, 0);
+  }
+}
+
+$(function() {
+  // Load all sections asynchronously
+  const intro    = $("#introduction").load("sections/introduction-en.html");
+  const overview = $("#overview").load("sections/overview-en.html");
+  const crossref = $("#crossref").load("sections/crossref-en.html");
+
+  // Wait until all are fully loaded
+  $.when(intro, overview, crossref).done(function() {
+    loadHash();
+  });
+});
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<div class="head">
+  <div style="float:right">language <a href="index-en.html"><b>en</b></a></div>
+  <h1>sBPMN Ontology</h1>
+
+  <dl>
+    <dt>Authors:</dt>
+    <dd>Franz Krause</dd>
+
+    <dt>Download serialization:</dt>
+    <dd>
+      <span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a></span>
+      <span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a></span>
+      <span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a></span>
+      <span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a></span>
+    </dd>
+
+    <dt>License:</dt>
+    <dd>
+      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+        <img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="License CC-BY 4.0" />
+      </a>
+    </dd>
+
+    <dt>Visualization:</dt>
+    <dd>
+      <a href="webvowl/index.html#" target="_blank">
+        <img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" />
+      </a>
+    </dd>
+
+    <dt>Cite as:</dt>
+	<dd>
+	Franz Krause, Heiko Paulheim, Amparo Vázquez, and Alejandro Espert. 2025. 
+	<i>sBPMN: A Framework for Capturing Business Process Semantics in Dynamic Knowledge Graphs.</i> 
+	In <i>Knowledge Capture Conference 2025 (K-CAP ’25)</i>, December 10–12, 2025, Dayton, OH, USA. 
+	ACM, New York, NY, USA, 8 pages. 
+	<a href="https://doi.org/10.1145/3731443.3771361" target="_blank">https://doi.org/10.1145/3731443.3771361</a>
+	</dd>
+  </dl>
+  <hr/>
+</div>
+
+<div class="status">
+  <div>
+    <span>Ontology Specification Draft</span>
+  </div>
+</div>
+
+<!-- SECTIONS (No ToC) -->
+<div id="introduction"></div>
+<div id="overview"></div>
+<div id="crossref"></div>
+
+<!-- Acknowledgments -->
+<h2 id="ack">Acknowledgments</h2>
+<p>
+The authors would like to thank 
+<a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing 
+<a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, 
+which is used for representing the Cross Referencing Section of this document, and 
+<a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing 
+<a href="https://github.com/dgarijo/Widoco">Widoco</a>, 
+the program used to create the template used in this documentation.
+</p>
+
+</div>
+</body>
+</html>
