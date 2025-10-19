@@ -1,5 +1,5 @@
-@prefix sbpmnc: <https://ntimes404.github.io/sBPMN/classes#> .
-@prefix sbpmnp: <https://ntimes404.github.io/sBPMN/properties#> .
+@prefix sbpmnc: <https://sBPMN.github.io/2.0/classes#> .
+@prefix sbpmnp: <https://sBPMN.github.io/2.0/properties#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
