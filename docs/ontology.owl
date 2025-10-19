@@ -1,0 +1,3883 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://sBPMN.github.io/2.0/"
+     xml:base="https://sBPMN.github.io/2.0/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://sBPMN.github.io/2.0/">
+        <terms:creator>Franz Krause</terms:creator>
+        <terms:description>An OWL formalization of BPMN 2.0 core constructs.</terms:description>
+        <terms:license>https://creativecommons.org/licenses/by/4.0/</terms:license>
+        <terms:title>sBPMN Ontology</terms:title>
+        <rdfs:label>sBPMN Ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#ID -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#ID"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/hasPart -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasPart"/>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#activationCondition -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#activationCondition">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#complexGateway"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#activityRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#activityRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#compensateEventDefinition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#artifact -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#artifact">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#collaboration"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#process"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#subChoreography"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#subProcess"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#artifact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#assignment -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#assignment">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataAssociation"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#assignment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#attachedToRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#attachedToRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#boundaryEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#auditing -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#auditing">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#flowElement"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#process"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#auditing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#calledChoreographyRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#calledChoreographyRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#callChoreography"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#calledCollaborationRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#calledCollaborationRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#callConversation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#calledElement -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#calledElement">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#callActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#categoryValue -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#categoryValue">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#category"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#categoryValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#categoryValueRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#categoryValueRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#flowElement"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#group"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#childLaneSet -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#childLaneSet">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#lane"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#laneSet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#choreographyRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#choreographyRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#collaboration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#completionCondition -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#completionCondition">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#adHocSubProcess"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#multiInstanceLoopCharacteristics"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#complexBehaviorDefinition -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#complexBehaviorDefinition">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#multiInstanceLoopCharacteristics"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#complexBehaviorDefinition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#condition -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#condition">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#complexBehaviorDefinition"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#conditionalEventDefinition"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#expression"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#formalExpression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#conditionExpression -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#conditionExpression">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#sequenceFlow"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#contains -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#contains">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/hasPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#conversationAssociation -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#conversationAssociation">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#collaboration"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#conversationAssociation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#conversationLink -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#conversationLink">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#collaboration"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#conversationLink"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#conversationNode -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#conversationNode">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#collaboration"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#subConversation"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#conversationNode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#correlationKey -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#correlationKey">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#choreographyActivity"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#collaboration"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#conversationNode"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#correlationKey"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#correlationKeyRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#correlationKeyRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#correlationSubscription"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#correlationPropertyBinding -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#correlationPropertyBinding">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#correlationSubscription"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#correlationPropertyBinding"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#correlationPropertyRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#correlationPropertyRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#correlationKey"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#correlationPropertyBinding"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#correlationPropertyRetrievalExpression -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#correlationPropertyRetrievalExpression">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#correlationProperty"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#correlationPropertyRetrievalExpression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#correlationSubscription -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#correlationSubscription">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#process"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#correlationSubscription"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#dataInput -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#dataInput">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#inputOutputSpecification"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#throwEvent"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#dataInput"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#dataInputAssociation -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#dataInputAssociation">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#activity"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#throwEvent"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#dataInputAssociation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#dataInputRefs -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#dataInputRefs">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#inputSet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#dataObjectRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#dataObjectRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataObjectReference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#dataOutput -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#dataOutput">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#catchEvent"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#inputOutputSpecification"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#dataOutput"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#dataOutputAssociation -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#dataOutputAssociation">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#activity"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#catchEvent"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#dataOutputAssociation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#dataOutputRefs -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#dataOutputRefs">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#outputSet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#dataPath -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#dataPath">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#correlationPropertyBinding"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#formalExpression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#dataState -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#dataState">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataInput"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataObject"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataObjectReference"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataOutput"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataStore"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataStoreReference"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#property"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#dataState"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#dataStoreRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#dataStoreRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataStoreReference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#default -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#default">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#activity"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#complexGateway"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#exclusiveGateway"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#inclusiveGateway"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#definition -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#definition">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#extension"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#definitionalCollaborationRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#definitionalCollaborationRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#process"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#documentation -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#documentation">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#baseElementWithMixedContent"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#extension"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#documentation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#endPointRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#endPointRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#errorRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#errorRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#errorEventDefinition"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#operation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#escalationRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#escalationRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#escalationEventDefinition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#evaluatesToTypeRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#evaluatesToTypeRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#formalExpression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#event -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#event">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#complexBehaviorDefinition"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#implicitThrowEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#eventDefinition -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#eventDefinition">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#catchEvent"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#throwEvent"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#eventDefinition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#eventDefinitionRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#eventDefinitionRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#catchEvent"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#throwEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#expression -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#expression">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#resourceAssignmentExpression"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#resourceParameterBinding"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#extensionElements -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#extensionElements">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#baseElementWithMixedContent"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#extensionElements"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#flowElement -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#flowElement">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#choreography"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#process"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#subChoreography"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#subProcess"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#flowElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#flowNodeRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#flowNodeRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#lane"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#from -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#from">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#assignment"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#implementationRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#implementationRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#interface"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#operation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#inMessageRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#inMessageRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#operation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#incoming -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#incoming">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#flowNode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#initiatingParticipantRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#initiatingParticipantRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#choreographyActivity"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#globalChoreographyTask"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#innerConversationNodeRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#innerConversationNodeRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#conversationAssociation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#innerMessageFlowRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#innerMessageFlowRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#messageFlowAssociation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#innerParticipantRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#innerParticipantRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#participantAssociation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#inputDataItem -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#inputDataItem">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#multiInstanceLoopCharacteristics"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#dataInput"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#inputDataRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#inputDataRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#inputOutputBinding"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#inputSet -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#inputSet">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#inputOutputSpecification"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#throwEvent"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#inputSet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#inputSetRefs -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#inputSetRefs">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#outputSet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#interfaceRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#interfaceRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#ioBinding -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#ioBinding">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#callableElement"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#ioBinding"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#ioSpecification -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#ioSpecification">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#activity"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#callableElement"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#ioSpecification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#itemRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#itemRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#message"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#itemSubjectRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#itemSubjectRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataInput"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataObject"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataObjectReference"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataOutput"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataStore"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataStoreReference"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#lane -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#lane">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#laneSet"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#lane"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#laneSet -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#laneSet">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#process"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#subProcess"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#laneSet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#loopCardinality -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#loopCardinality">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#multiInstanceLoopCharacteristics"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#loopCharacteristics -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#loopCharacteristics">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#activity"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#loopCharacteristics"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#loopCondition -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#loopCondition">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#standardLoopCharacteristics"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#loopDataInputRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#loopDataInputRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#multiInstanceLoopCharacteristics"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#loopDataOutputRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#loopDataOutputRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#multiInstanceLoopCharacteristics"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#messageFlow -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#messageFlow">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#collaboration"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#messageFlow"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#messageFlowAssociation -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#messageFlowAssociation">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#collaboration"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#messageFlowAssociation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#messageFlowRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#messageFlowRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#choreographyTask"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#conversationNode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#messagePath -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#messagePath">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#correlationPropertyRetrievalExpression"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#formalExpression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#messageRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#messageRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#correlationPropertyRetrievalExpression"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#messageEventDefinition"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#messageFlow"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#receiveTask"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#sendTask"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#monitoring -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#monitoring">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#flowElement"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#process"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#monitoring"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#noneBehaviorEventRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#noneBehaviorEventRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#multiInstanceLoopCharacteristics"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#oneBehaviorEventRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#oneBehaviorEventRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#multiInstanceLoopCharacteristics"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#operation -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#operation">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#interface"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#operation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#operationRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#operationRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#inputOutputBinding"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#messageEventDefinition"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#receiveTask"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#sendTask"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#serviceTask"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#optionalInputRefs -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#optionalInputRefs">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#inputSet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#optionalOutputRefs -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#optionalOutputRefs">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#outputSet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#outMessageRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#outMessageRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#operation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#outerConversationNodeRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#outerConversationNodeRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#conversationAssociation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#outerMessageFlowRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#outerMessageFlowRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#messageFlowAssociation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#outerParticipantRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#outerParticipantRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#participantAssociation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#outgoing -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#outgoing">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#flowNode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#outputDataItem -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#outputDataItem">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#multiInstanceLoopCharacteristics"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#dataOutput"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#outputDataRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#outputDataRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#inputOutputBinding"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#outputSet -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#outputSet">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#catchEvent"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#inputOutputSpecification"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#outputSet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#outputSetRefs -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#outputSetRefs">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#inputSet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#parameterRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#parameterRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#resourceParameterBinding"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#participant -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#participant">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#collaboration"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#participantAssociation -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#participantAssociation">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#callChoreography"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#callConversation"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#collaboration"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#participantAssociation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#participantMultiplicity -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#participantMultiplicity">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#participant"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#participantMultiplicity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#participantRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#participantRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#choreographyActivity"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#conversationNode"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#partnerEntity"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#partnerRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#partitionElement -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#partitionElement">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#lane"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#partitionElementRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#partitionElementRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#lane"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#processRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#processRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#property -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#property">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#activity"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#event"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#process"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#rendering -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#rendering">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#globalUserTask"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#userTask"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#rendering"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#resourceParameter -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#resourceParameter">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#resource"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#resourceParameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#resourceParameterBinding -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#resourceParameterBinding">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#resourceRole"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#resourceParameterBinding"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#resourceRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#resourceRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#resourceRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#resourceRole -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#resourceRole">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#activity"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#globalTask"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#process"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#resourceRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#script -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#script">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#globalScriptTask"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#scriptTask"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#script"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#signalRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#signalRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#signalEventDefinition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#source -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#source">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#linkEventDefinition"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#relationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#sourceRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#sourceRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#association"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#conversationLink"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataAssociation"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#messageFlow"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#sequenceFlow"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#structureRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#structureRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#error"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#escalation"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#itemDefinition"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#signal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#supportedInterfaceRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#supportedInterfaceRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#callableElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#supports -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#supports">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#process"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#target -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#target">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#linkEventDefinition"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#relationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#targetRef -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#targetRef">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#association"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#conversationLink"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataAssociation"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#messageFlow"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#sequenceFlow"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#text -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#text">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#textAnnotation"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#text"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#to -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#to">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#assignment"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#transformation -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#transformation">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataAssociation"/>
+        <rdfs:range rdf:resource="https://sBPMN.github.io/2.0/classes#formalExpression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#type -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#type">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#correlationProperty"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#relationship"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#resourceParameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#whileExecutingInputRefs -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#whileExecutingInputRefs">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#inputSet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#whileExecutingOutputRefs -->
+
+
+    <owl:ObjectProperty rdf:about="https://sBPMN.github.io/2.0/properties#whileExecutingOutputRefs">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#outputSet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#associationDirection -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#associationDirection">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#association"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#behavior -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#behavior">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#multiInstanceLoopCharacteristics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#cancelActivity -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#cancelActivity">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#boundaryEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#cancelRemainingInstances -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#cancelRemainingInstances">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#adHocSubProcess"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#capacity -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#capacity">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataStore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#completionQuantity -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#completionQuantity">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#activity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#direction -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#direction">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#relationship"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#errorCode -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#errorCode">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#error"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#escalationCode -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#escalationCode">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#escalation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#eventGatewayType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#eventGatewayType">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#eventBasedGateway"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#gatewayDirection -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#gatewayDirection">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#gateway"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#id -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#id">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#baseElementWithMixedContent"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#documentation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#ID"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#implementation -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#implementation">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#businessRuleTask"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#globalBusinessRuleTask"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#globalUserTask"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#receiveTask"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#sendTask"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#serviceTask"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#userTask"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#token"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#instantiate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#instantiate">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#eventBasedGateway"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#receiveTask"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#isClosed -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#isClosed">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#collaboration"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#process"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#isCollection -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#isCollection">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataInput"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataObject"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataOutput"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#itemDefinition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#isExecutable -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#isExecutable">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#process"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#isForCompensation -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#isForCompensation">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#activity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#isImmediate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#isImmediate">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#sequenceFlow"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#isInterrupting -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#isInterrupting">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#startEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#isRequired -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#isRequired">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#resourceParameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#isSequential -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#isSequential">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#multiInstanceLoopCharacteristics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#isUnlimited -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#isUnlimited">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataStore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#itemKind -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#itemKind">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#itemDefinition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#language -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#language">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#formalExpression"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#loopMaximum -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#loopMaximum">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#standardLoopCharacteristics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#loopType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#loopType">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#choreographyActivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#maximum -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#maximum">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#participantMultiplicity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#method -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#method">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#transaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#token"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#minimum -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#minimum">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#participantMultiplicity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#mustUnderstand -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#mustUnderstand">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#extension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#name -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#name">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#callableElement"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#category"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#collaboration"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#conversationLink"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#conversationNode"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#correlationKey"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#correlationProperty"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataInput"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataOutput"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataState"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#dataStore"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#error"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#escalation"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#flowElement"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#inputSet"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#interface"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#lane"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#laneSet"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#linkEventDefinition"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#message"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#messageFlow"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#operation"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#outputSet"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#participant"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#partnerEntity"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#partnerRole"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#property"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#resource"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#resourceParameter"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#resourceRole"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#signal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#ordering -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#ordering">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#adHocSubProcess"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#parallelMultiple -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#parallelMultiple">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#catchEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#processType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#processType">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#process"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#scriptFormat -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#scriptFormat">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#scriptTask"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#scriptLanguage -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#scriptLanguage">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#globalScriptTask"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#startQuantity -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#startQuantity">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#activity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#testBefore -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#testBefore">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#standardLoopCharacteristics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#textFormat -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#textFormat">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#documentation"/>
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#textAnnotation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#triggeredByEvent -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#triggeredByEvent">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#subProcess"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#type -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#type">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#value -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#value">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#categoryValue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/properties#waitForCompletion -->
+
+
+    <owl:DatatypeProperty rdf:about="https://sBPMN.github.io/2.0/properties#waitForCompletion">
+        <rdfs:domain rdf:resource="https://sBPMN.github.io/2.0/classes#compensateEventDefinition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#activity -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#activity">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#flowNode"/>
+        <rdfs:comment xml:lang="en">Base for executable work (task, subprocess, callActivity).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#adHocSubProcess -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#adHocSubProcess">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#subProcess"/>
+        <rdfs:comment xml:lang="en">Subprocess where contained activities may run in an ad-hoc (unordered/conditional) manner.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#allBehaviorMultiInstanceLoopCharacteristics -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#allBehaviorMultiInstanceLoopCharacteristics">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#multiInstanceLoopCharacteristics"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#behavior"/>
+                        <owl:hasValue>All</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#multiInstanceLoopCharacteristics"/>
+        <rdfs:comment xml:lang="en">MI behavior where all instances must complete per rule.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#artifact -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#artifact">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Non-executable artifact (e.g., group, annotation).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#assignment -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#assignment">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Data assignment from source to target (within data associations).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#association -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#association">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#artifact"/>
+        <rdfs:comment xml:lang="en">Connecting object linking artifacts and flow elements (non-control).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#auditing -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#auditing">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Placeholder for audit metadata of a model element.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#backwardDirectionRelationship -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#backwardDirectionRelationship">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#relationship"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#direction"/>
+                        <owl:hasValue>Backward</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#relationship"/>
+        <rdfs:comment xml:lang="en">Relationship with backward/target-to-source direction (schema helper).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#baseElement -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#baseElement">
+        <rdfs:comment xml:lang="en">Abstract root carrying id, documentation, and extensions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#baseElementWithMixedContent -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#baseElementWithMixedContent">
+        <rdfs:comment xml:lang="en">Base element whose documentation/extension may include mixed content.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#bidirectionalAssociation -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#bidirectionalAssociation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#association"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#associationDirection"/>
+                        <owl:hasValue>Both</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#association"/>
+        <rdfs:comment xml:lang="en">Association whose direction is both ways (diagram semantics).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#bothDirectionRelationship -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#bothDirectionRelationship">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#relationship"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#direction"/>
+                        <owl:hasValue>Both</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#relationship"/>
+        <rdfs:comment xml:lang="en">Relationship with both directions (schema helper).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#boundaryEvent -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#boundaryEvent">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#catchEvent"/>
+        <rdfs:comment xml:lang="en">Event attached to an activity boundary (interrupting or non-interrupting).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#businessRuleTask -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#businessRuleTask">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#task"/>
+        <rdfs:comment xml:lang="en">Task that evaluates business rules/decision logic.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#callActivity -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#callActivity">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#activity"/>
+        <rdfs:comment xml:lang="en">Activity that invokes a reusable process or global task.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#callChoreography -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#callChoreography">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#choreographyActivity"/>
+        <rdfs:comment xml:lang="en">Choreography activity that calls a reusable global choreography.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#callConversation -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#callConversation">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#conversationNode"/>
+        <rdfs:comment xml:lang="en">Conversation node that invokes a reusable globalConversation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#callableElement -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#callableElement">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#rootElement"/>
+        <rdfs:comment xml:lang="en">Abstract base for elements that can be called (process, globalTask, globalChoreographyTask).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#cancelEventDefinition -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#cancelEventDefinition">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#eventDefinition"/>
+        <rdfs:comment xml:lang="en">Event definition that cancels a running transaction.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#catchEvent -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#catchEvent">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#event"/>
+        <rdfs:comment xml:lang="en">Event that waits for a trigger (base for start/intermediate-catch/boundary).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#category -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#category">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#rootElement"/>
+        <rdfs:comment xml:lang="en">Taxonomy definition used for tagging (with categoryValues).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#categoryValue -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#categoryValue">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Concrete tag value from a category applied to elements.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#choreography -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#choreography">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#collaboration"/>
+        <rdfs:comment xml:lang="en">A process describing interactions (message exchanges) between participants.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#choreographyActivity -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#choreographyActivity">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#flowNode"/>
+        <rdfs:comment xml:lang="en">Base of choreographyTask and subChoreography; describes an interaction step.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#choreographyTask -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#choreographyTask">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#choreographyActivity"/>
+        <rdfs:comment xml:lang="en">A single-step interaction between participants (who sends/receives what).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#collaboration -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#collaboration">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#rootElement"/>
+        <rdfs:comment xml:lang="en">Diagram of participants (pools) and their message flows.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#compensateEventDefinition -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#compensateEventDefinition">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#eventDefinition"/>
+        <rdfs:comment xml:lang="en">Event definition that triggers compensation handlers.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#compensateTransaction -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#compensateTransaction">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#transaction"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#method"/>
+                        <owl:hasValue>##Compensate</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#transaction"/>
+        <rdfs:comment xml:lang="en">Transaction that triggers compensation (non-standard specialization; diagram-level semantics).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#complexBehaviorDefinition -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#complexBehaviorDefinition">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Rule used within MI loop to control behavior on completion/activation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#complexBehaviorMultiInstanceLoopCharacteristics -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#complexBehaviorMultiInstanceLoopCharacteristics">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#multiInstanceLoopCharacteristics"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#behavior"/>
+                        <owl:hasValue>Complex</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#multiInstanceLoopCharacteristics"/>
+        <rdfs:comment xml:lang="en">Fine-grained completion/trigger rules for multi-instance behavior.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#complexGateway -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#complexGateway">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#gateway"/>
+        <rdfs:comment xml:lang="en">Gateway with expression-defined merging/splitting behavior.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#conditionalEventDefinition -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#conditionalEventDefinition">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#eventDefinition"/>
+        <rdfs:comment xml:lang="en">Event definition that fires when a condition becomes true.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#convergingDirectionGateway -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#convergingDirectionGateway">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#gateway"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#gatewayDirection"/>
+                        <owl:hasValue>Converging</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#gateway"/>
+        <rdfs:comment xml:lang="en">Gateway state when merging flow (schema helper).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#conversation -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#conversation">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#conversationNode"/>
+        <rdfs:comment xml:lang="en">Set of related message exchanges between participants.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#conversationAssociation -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#conversationAssociation">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Association linking a conversation and model elements.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#conversationLink -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#conversationLink">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Connector that associates a conversation node with a participant.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#conversationNode -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#conversationNode">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Abstract base for conversation, callConversation, subConversation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#correlationKey -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#correlationKey">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Named set of correlation properties to match messages to instances.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#correlationProperty -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#correlationProperty">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#rootElement"/>
+        <rdfs:comment xml:lang="en">Property used to compute correlation keys from messages.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#correlationPropertyBinding -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#correlationPropertyBinding">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Binds a correlation property to a concrete value in a message.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#correlationPropertyRetrievalExpression -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#correlationPropertyRetrievalExpression">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Expression describing how to extract a correlation property from a message.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#correlationSubscription -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#correlationSubscription">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Defines correlation keys subscribed to by a process for message matching.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#dataAssociation -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#dataAssociation">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Generic association connecting data sources and targets.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#dataInput -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#dataInput">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Declared input parameter for an activity/process.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#dataInputAssociation -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#dataInputAssociation">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#dataAssociation"/>
+        <rdfs:comment xml:lang="en">Association connecting sources to a dataInput of an activity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#dataObject -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#dataObject">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#flowElement"/>
+        <rdfs:comment xml:lang="en">Data artifact within a process instance.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#dataObjectReference -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#dataObjectReference">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#flowElement"/>
+        <rdfs:comment xml:lang="en">Reference to a dataObject used in a process.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#dataOutput -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#dataOutput">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Declared output parameter for an activity/process.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#dataOutputAssociation -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#dataOutputAssociation">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#dataAssociation"/>
+        <rdfs:comment xml:lang="en">Association connecting an activity&apos;s dataOutput to targets.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#dataState -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#dataState">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Named state for a data object/store (e.g., Approved).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#dataStore -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#dataStore">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#rootElement"/>
+        <rdfs:comment xml:lang="en">Persistent data container shared across processes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#dataStoreReference -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#dataStoreReference">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#flowElement"/>
+        <rdfs:comment xml:lang="en">Reference to a persistent dataStore.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#divergingDirectionGateway -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#divergingDirectionGateway">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#gateway"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#gatewayDirection"/>
+                        <owl:hasValue>Diverging</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#gateway"/>
+        <rdfs:comment xml:lang="en">Gateway state when splitting flow (schema helper for direction).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#documentation -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#documentation">
+        <rdfs:comment xml:lang="en">Free text attached to any model element.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#endEvent -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#endEvent">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#throwEvent"/>
+        <rdfs:comment xml:lang="en">Event that ends a path; may throw a result (error/escalation/etc.).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#endPoint -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#endPoint">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#rootElement"/>
+        <rdfs:comment xml:lang="en">Endpoint (address) used for message exchange (collaboration context).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#error -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#error">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#rootElement"/>
+        <rdfs:comment xml:lang="en">Named error used by error events and operations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#errorEventDefinition -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#errorEventDefinition">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#eventDefinition"/>
+        <rdfs:comment xml:lang="en">Event definition representing an error (exception).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#escalation -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#escalation">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#rootElement"/>
+        <rdfs:comment xml:lang="en">Named escalation used by escalation events.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#escalationEventDefinition -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#escalationEventDefinition">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#eventDefinition"/>
+        <rdfs:comment xml:lang="en">Event definition signaling an escalation condition.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#event -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#event">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#flowNode"/>
+        <rdfs:comment xml:lang="en">Abstract base for start, intermediate, end, and boundary events.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#eventBasedGateway -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#eventBasedGateway">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#gateway"/>
+        <rdfs:comment xml:lang="en">Gateway that routes based on the first event that occurs.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#eventDefinition -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#eventDefinition">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#rootElement"/>
+        <rdfs:comment xml:lang="en">Abstract base for event definitions (message, timer, error, etc.).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#exclusiveEventBasedGateway -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#exclusiveEventBasedGateway">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#eventBasedGateway"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#eventGatewayType"/>
+                        <owl:hasValue>Exclusive</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#eventBasedGateway"/>
+        <rdfs:comment xml:lang="en">Event-based gateway that expects exactly one of several events.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#exclusiveGateway -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#exclusiveGateway">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#gateway"/>
+        <rdfs:comment xml:lang="en">XOR gateway that routes one of many paths.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#expression -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#expression">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElementWithMixedContent"/>
+        <rdfs:comment xml:lang="en">Generic expression value (language + body).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#extension -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#extension">
+        <rdfs:comment xml:lang="en">One extension entry inside extensionElements.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#extensionElements -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#extensionElements">
+        <rdfs:comment xml:lang="en">Container for vendor/tool-specific extensions on a model element.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#flowElement -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#flowElement">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Abstract base for elements inside a process (activities, gateways, events, sequence flows).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#flowNode -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#flowNode">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#flowElement"/>
+        <rdfs:comment xml:lang="en">Base for nodes with incoming/outgoing sequence flows.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#formalExpression -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#formalExpression">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#expression"/>
+        <rdfs:comment xml:lang="en">Expression with optional language, evaluates formally (e.g., XPath, FEEL).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#forwardDirectionRelationship -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#forwardDirectionRelationship">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#relationship"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#direction"/>
+                        <owl:hasValue>Forward</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#relationship"/>
+        <rdfs:comment xml:lang="en">Relationship with forward/source-to-target direction (schema helper).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#gateway -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#gateway">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#flowNode"/>
+        <rdfs:comment xml:lang="en">Decision/merge control point in the process flow.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#globalBusinessRuleTask -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#globalBusinessRuleTask">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#globalTask"/>
+        <rdfs:comment xml:lang="en">Reusable business rule task definition.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#globalChoreographyTask -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#globalChoreographyTask">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#choreography"/>
+        <rdfs:comment xml:lang="en">Reusable choreography task definition.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#globalConversation -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#globalConversation">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#collaboration"/>
+        <rdfs:comment xml:lang="en">Reusable conversation definition.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#globalManualTask -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#globalManualTask">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#globalTask"/>
+        <rdfs:comment xml:lang="en">Reusable manual task definition.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#globalScriptTask -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#globalScriptTask">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#globalTask"/>
+        <rdfs:comment xml:lang="en">Reusable script task definition (callable from a CallActivity).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#globalTask -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#globalTask">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#callableElement"/>
+        <rdfs:comment xml:lang="en">Reusable abstract task definition.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#globalUserTask -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#globalUserTask">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#globalTask"/>
+        <rdfs:comment xml:lang="en">Reusable user task definition.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#group -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#group">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#artifact"/>
+        <rdfs:comment xml:lang="en">Artifact that groups elements visually/logically.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#humanPerformer -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#humanPerformer">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#performer"/>
+        <rdfs:comment xml:lang="en">Resource role specifying human execution of an activity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#imageTransaction -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#imageTransaction">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#transaction"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#method"/>
+                        <owl:hasValue>##Image</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#transaction"/>
+        <rdfs:comment xml:lang="en">Transaction marker/style for diagram rendering (non-executable, diagram-oriented).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#implicitThrowEvent -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#implicitThrowEvent">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#throwEvent"/>
+        <rdfs:comment xml:lang="en">Throw event without explicit marker (rarely used directly).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#inclusiveGateway -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#inclusiveGateway">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#gateway"/>
+        <rdfs:comment xml:lang="en">OR gateway allowing one or more outgoing paths based on conditions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#informationItemDefinition -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#informationItemDefinition">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#itemDefinition"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#itemKind"/>
+                        <owl:hasValue>Information</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#itemDefinition"/>
+        <rdfs:comment xml:lang="en">Lightweight data type used in conversations (non-executable informational item).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#inputOutputBinding -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#inputOutputBinding">
+        <rdfs:comment xml:lang="en">Binds input/output parameters when calling a callable element.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#inputOutputSpecification -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#inputOutputSpecification">
+        <rdfs:comment xml:lang="en">Declares data inputs/outputs and groups of how they’re used.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#inputSet -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#inputSet">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Grouping of dataInputs that are consumed together.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#interface -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#interface">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#rootElement"/>
+        <rdfs:comment xml:lang="en">Service interface grouping operations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#intermediateCatchEvent -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#intermediateCatchEvent">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#catchEvent"/>
+        <rdfs:comment xml:lang="en">Mid-process event that waits for a trigger.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#intermediateThrowEvent -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#intermediateThrowEvent">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#throwEvent"/>
+        <rdfs:comment xml:lang="en">Mid-process event that throws a trigger.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#ioBinding -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#ioBinding">
+        <rdfs:comment xml:lang="en">Binds inputs/outputs between an activity and a callable element.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#ioSpecification -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#ioSpecification">
+        <rdfs:comment xml:lang="en">Lists all data inputs and outputs and groups them into input/output sets.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#itemDefinition -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#itemDefinition">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#rootElement"/>
+        <rdfs:comment xml:lang="en">Defines the structure/type carried by data objects or messages.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#lane -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#lane">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Swimlane partition that groups flow nodes by responsibility.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#laneSet -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#laneSet">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Container grouping lanes within a process/subprocess.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#linkEventDefinition -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#linkEventDefinition">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#eventDefinition"/>
+        <rdfs:comment xml:lang="en">Event definition that links two points in a process (goto-like).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#loopCharacteristics -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#loopCharacteristics">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Abstract base for activity looping configuration.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#manualTask -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#manualTask">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#task"/>
+        <rdfs:comment xml:lang="en">Task performed manually without system support.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#message -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#message">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#rootElement"/>
+        <rdfs:comment xml:lang="en">Message type (payload) referenced by operations and message flows.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#messageEventDefinition -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#messageEventDefinition">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#eventDefinition"/>
+        <rdfs:comment xml:lang="en">Event definition for sending/receiving a specific message.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#messageFlow -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#messageFlow">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Connecting object that shows message exchange between participants.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#messageFlowAssociation -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#messageFlowAssociation">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Associates a message flow with a message and correlation data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#mixedDirectionGateway -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#mixedDirectionGateway">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#gateway"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#gatewayDirection"/>
+                        <owl:hasValue>Mixed</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#gateway"/>
+        <rdfs:comment xml:lang="en">Gateway capable of both converging and diverging (schema helper).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#monitoring -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#monitoring">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Placeholder for runtime monitoring metadata of a model element.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#multiInstanceLoopCharacteristics -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#multiInstanceLoopCharacteristics">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#loopCharacteristics"/>
+        <rdfs:comment xml:lang="en">Configures multi-instance execution (parallel or sequential) of an activity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#multiInstanceParallelLoopChoreographyActivity -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#multiInstanceParallelLoopChoreographyActivity">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#choreographyActivity"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#loopType"/>
+                        <owl:hasValue>MultiInstanceParallel</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#choreographyActivity"/>
+        <rdfs:comment xml:lang="en">Choreography activity executed multiple times in parallel.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#multiInstanceSequentialLoopChoreographyActivity -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#multiInstanceSequentialLoopChoreographyActivity">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#choreographyActivity"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#loopType"/>
+                        <owl:hasValue>MultiInstanceSequential</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#choreographyActivity"/>
+        <rdfs:comment xml:lang="en">Choreography activity executed multiple times sequentially.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#noneBehaviorMultiInstanceLoopCharacteristics -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#noneBehaviorMultiInstanceLoopCharacteristics">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#multiInstanceLoopCharacteristics"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#behavior"/>
+                        <owl:hasValue>None</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#multiInstanceLoopCharacteristics"/>
+        <rdfs:comment xml:lang="en">MI behavior with no special completion rule beyond default.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#noneDirectionRelationship -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#noneDirectionRelationship">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#relationship"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#direction"/>
+                        <owl:hasValue>None</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#relationship"/>
+        <rdfs:comment xml:lang="en">Relationship without specified direction.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#noneLoopChoreographyActivity -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#noneLoopChoreographyActivity">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#choreographyActivity"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#loopType"/>
+                        <owl:hasValue>None</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#choreographyActivity"/>
+        <rdfs:comment xml:lang="en">Choreography activity with no looping behavior.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#noneProcess -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#noneProcess">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#process"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#processType"/>
+                        <owl:hasValue>None</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#process"/>
+        <rdfs:comment xml:lang="en">Process with type &apos;none&apos; (no public/private semantics).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#oneBehaviorMultiInstanceLoopCharacteristics -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#oneBehaviorMultiInstanceLoopCharacteristics">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#multiInstanceLoopCharacteristics"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#behavior"/>
+                        <owl:hasValue>One</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#multiInstanceLoopCharacteristics"/>
+        <rdfs:comment xml:lang="en">MI behavior where completion is based on one instance rule.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#oneWayAssociation -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#oneWayAssociation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#association"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#associationDirection"/>
+                        <owl:hasValue>One</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#association"/>
+        <rdfs:comment xml:lang="en">Association with direction indicated as one-way (diagram semantics).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#operation -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#operation">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Service operation with in/out messages and errors.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#outputSet -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#outputSet">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Grouping of dataOutputs that are produced together.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#parallelAdHocSubProcess -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#parallelAdHocSubProcess">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#adHocSubProcess"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#ordering"/>
+                        <owl:hasValue>Parallel</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#adHocSubProcess"/>
+        <rdfs:comment xml:lang="en">Ad-hoc subprocess where activities may run in parallel.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#parallelEventBasedGateway -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#parallelEventBasedGateway">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#eventBasedGateway"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#eventGatewayType"/>
+                        <owl:hasValue>Parallel</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#eventBasedGateway"/>
+        <rdfs:comment xml:lang="en">Event-based gateway that waits for multiple events in parallel.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#parallelGateway -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#parallelGateway">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#gateway"/>
+        <rdfs:comment xml:lang="en">AND gateway synchronizing/splitting parallel paths.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#participant -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#participant">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">A pool representing a participant in collaboration.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#participantAssociation -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#participantAssociation">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Maps choreography participants to process elements.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#participantMultiplicity -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#participantMultiplicity">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Multiplicity constraints for a participant in choreography.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#partnerEntity -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#partnerEntity">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#rootElement"/>
+        <rdfs:comment xml:lang="en">Defines an external business entity participating in conversations/choreographies.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#partnerRole -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#partnerRole">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#rootElement"/>
+        <rdfs:comment xml:lang="en">Role played by a partner entity in interactions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#performer -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#performer">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#resourceRole"/>
+        <rdfs:comment xml:lang="en">Generic performer role for an activity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#physicalItemDefinition -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#physicalItemDefinition">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#itemDefinition"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#itemKind"/>
+                        <owl:hasValue>Physical</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#itemDefinition"/>
+        <rdfs:comment xml:lang="en">Information item that refers to a physical item (conversation context).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#potentialOwner -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#potentialOwner">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#humanPerformer"/>
+        <rdfs:comment xml:lang="en">Human candidate allowed to claim a user task.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#privateProcess -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#privateProcess">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#process"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#processType"/>
+                        <owl:hasValue>Private</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#process"/>
+        <rdfs:comment xml:lang="en">Process internal to an organization (detailed orchestration).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#process -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#process">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#callableElement"/>
+        <rdfs:comment xml:lang="en">Container of flow elements; an executable or non-executable business process.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#property -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#property">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Local variable scoped to a process or flow element.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#publicProcess -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#publicProcess">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#process"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#processType"/>
+                        <owl:hasValue>Public</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#process"/>
+        <rdfs:comment xml:lang="en">Process intended for public view/interfaces (non-executable details abstracted).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#receiveTask -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#receiveTask">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#task"/>
+        <rdfs:comment xml:lang="en">Task that waits to receive a message.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#relationship -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#relationship">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Generic typed relationship between two model elements.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#rendering -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#rendering">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Diagram interchange rendering (icon/graphic) for an element.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#resource -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#resource">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#rootElement"/>
+        <rdfs:comment xml:lang="en">Defines a resource (human/system) type.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#resourceAssignmentExpression -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#resourceAssignmentExpression">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Expression that assigns resources (performers) to an activity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#resourceParameter -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#resourceParameter">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Parameter of a resource definition.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#resourceParameterBinding -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#resourceParameterBinding">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Binds a resourceParameter to a value for a specific activity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#resourceRole -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#resourceRole">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Base role that links activities to resources/performers.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#rootElement -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#rootElement">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#baseElement"/>
+        <rdfs:comment xml:lang="en">Abstract element that may appear at definitions level (process, message, error, etc.).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#script -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#script">
+        <rdfs:comment xml:lang="en">Script body value (textual content for scriptTask, etc.).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#scriptTask -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#scriptTask">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#task"/>
+        <rdfs:comment xml:lang="en">Task that runs an inline script.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#sendTask -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#sendTask">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#task"/>
+        <rdfs:comment xml:lang="en">Task that sends a message.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#sequenceFlow -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#sequenceFlow">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#flowElement"/>
+        <rdfs:comment xml:lang="en">Directed control-flow connection between two flow nodes, optionally with a condition.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#sequentialAdHocSubProcess -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#sequentialAdHocSubProcess">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#adHocSubProcess"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#ordering"/>
+                        <owl:hasValue>Sequential</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#adHocSubProcess"/>
+        <rdfs:comment xml:lang="en">Ad-hoc subprocess where activities are constrained to sequential execution.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#serviceTask -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#serviceTask">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#task"/>
+        <rdfs:comment xml:lang="en">Task that invokes an automated service.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#signal -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#signal">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#rootElement"/>
+        <rdfs:comment xml:lang="en">Named broadcast trigger used by signal events.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#signalEventDefinition -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#signalEventDefinition">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#eventDefinition"/>
+        <rdfs:comment xml:lang="en">Event definition for broadcast signals.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#standardLoopCharacteristics -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#standardLoopCharacteristics">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#loopCharacteristics"/>
+        <rdfs:comment xml:lang="en">While/do-while style loop settings for an activity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#standardLoopChoreographyActivity -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#standardLoopChoreographyActivity">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#choreographyActivity"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#loopType"/>
+                        <owl:hasValue>Standard</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#choreographyActivity"/>
+        <rdfs:comment xml:lang="en">Choreography activity repeating using standard loop semantics.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#startEvent -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#startEvent">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#catchEvent"/>
+        <rdfs:comment xml:lang="en">Event that starts a process or subprocess.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#storeTransaction -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#storeTransaction">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#transaction"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#method"/>
+                        <owl:hasValue>##Store</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#transaction"/>
+        <rdfs:comment xml:lang="en">Transaction focused on data persistence (non-standard specialization; diagram-level semantics).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#subChoreography -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#subChoreography">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#choreographyActivity"/>
+        <rdfs:comment xml:lang="en">Embedded choreography with internal flow.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#subConversation -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#subConversation">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#conversationNode"/>
+        <rdfs:comment xml:lang="en">Conversation composed of other conversation nodes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#subProcess -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#subProcess">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#activity"/>
+        <rdfs:comment xml:lang="en">Activity that contains an embedded flow (can be expanded/collapsed).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#task -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#task">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#activity"/>
+        <rdfs:comment xml:lang="en">Atomic unit of work.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#terminateEventDefinition -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#terminateEventDefinition">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#eventDefinition"/>
+        <rdfs:comment xml:lang="en">Event definition that terminates the process scope immediately.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#text -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#text">
+        <rdfs:comment xml:lang="en">Plain text content used in documentation/expressions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#textAnnotation -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#textAnnotation">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#artifact"/>
+        <rdfs:comment xml:lang="en">Artifact carrying free-form explanatory text.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#throwEvent -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#throwEvent">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#event"/>
+        <rdfs:comment xml:lang="en">Event that throws a trigger (base for intermediate/end throw).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#timerEventDefinition -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#timerEventDefinition">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#eventDefinition"/>
+        <rdfs:comment xml:lang="en">Event definition triggered by time (date/duration/cycle).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#transaction -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#transaction">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#subProcess"/>
+        <rdfs:comment xml:lang="en">Subprocess with transactional semantics (supports cancel).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#undirectedAssociation -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#undirectedAssociation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#association"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#associationDirection"/>
+                        <owl:hasValue>None</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#association"/>
+        <rdfs:comment xml:lang="en">Association without arrowheads (pure annotation link).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#unspecifiedDirectionGateway -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#unspecifiedDirectionGateway">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://sBPMN.github.io/2.0/classes#gateway"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://sBPMN.github.io/2.0/properties#gatewayDirection"/>
+                        <owl:hasValue>Unspecified</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#gateway"/>
+        <rdfs:comment xml:lang="en">Gateway with unspecified direction (schema helper).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://sBPMN.github.io/2.0/classes#userTask -->
+
+
+    <owl:Class rdf:about="https://sBPMN.github.io/2.0/classes#userTask">
+        <rdfs:subClassOf rdf:resource="https://sBPMN.github.io/2.0/classes#task"/>
+        <rdfs:comment xml:lang="en">Task performed by a human via a UI or worklist.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
