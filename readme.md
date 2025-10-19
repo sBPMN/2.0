@@ -8,7 +8,7 @@ The architecture consists of five main services connected through shared volumes
 
 | Service   | Description |
 |-----------|-------------|
-| **[Camunda 7 BPMN Platform](https://camunda.com/platform/legacy/bpm/)** | BPMN execution engine with web frontend on port `9094`. |
+| **[Camunda 7 BPMN Platform](https://camunda.com/platform-7/)** | BPMN execution engine with web frontend on port `9094`. |
 | **[H2 Database (v1.4.190)](https://www.h2database.com/html/main.html)** | Lightweight SQL database used to store Camunda history logs on port `9093`. |
 | **[Ontop Endpoint](https://ontop-vkg.org/)** | Exposes virtual RDF graphs using the OBDA paradigm. It connects to H2 and uses `mapping.obda`, `ontology.owl`, and `database.properties`. |
 | **[Apache Jena Fuseki](https://jena.apache.org/documentation/fuseki2/)** | Hosts an RDF knowledge graph on port `9096`, typically used for background domain knowledge (e.g. BPMN concepts). |
