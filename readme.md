@@ -23,7 +23,7 @@ Ensure you have [Docker](https://www.docker.com/) and [Docker Compose](https://d
 ### 1. Clone the Repository
 
 ```bash
-git clone https://gitlab.dws.informatik.uni-mannheim.de/teaming-ai/sbpmn.git
+git clone https://github.com/sBPMN/2.0.git
 cd sBPMN
 ```
 
